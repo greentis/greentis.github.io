@@ -11,7 +11,7 @@ Vue.createApp({
                     {text:"Flexbox basics", url:"notes/flexbox.html"}
                 ]},
                 {text:"Study Notes", pages:[
-                    {text:"Biology keyword list", url:"https://hkustconnect-my.sharepoint.com/:w:/g/personal/kllauar_connect_ust_hk/EXlW0R9OOr9Cmt271k78Fa0B3o_0kYQLswVonzWDQj7WHg?e=b5WVGf"}
+                    {text:"Biology keyword list", url:"https://hkustconnect-my.sharepoint.com/:w:/g/personal/kllauar_connect_ust_hk/EXlW0R9OOr9Cmt271k78Fa0Bhe4zSPyah7mZi8q2ZCKjUA?e=elZ3C4"}
                 ]}
             ]
         }
