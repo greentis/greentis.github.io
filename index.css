@@ -11,7 +11,7 @@ body:has(.navbar-dark){
     aspect-ratio: 5/2;
     border-radius: 200px;
 
-    position: absolute;
+    position: relative;
     display: block;
     background: wheat;
     
@@ -34,8 +34,10 @@ body:has(.navbar-dark){
 }
 
 #dark-mode-toggle{
-    width:0;
-    height:0;
+    width:0px;
+    height:0px;
+    position: absolute;
+    align-items: center;
     visibility: hidden;
     transition: 0.3s;
 }
@@ -45,7 +47,7 @@ body:has(.navbar-dark){
 #dark-mode-toggle:checked + #dark-mode-toggle-checkbox:after{
     left: 98%;
     transform: translateX(-100%);
-    background: linear-gradient(180deg, #777, #3a3a3a);
+    background: linear-gradient(180deg, #676767, #3a3a3a);
 }
 #dark-mode-toggle-checkbox:active:after{
     width: 58%;
@@ -56,7 +58,9 @@ body{
 }
 #dark-mode-toggle-checkbox svg{
     position: absolute;
+    top:18.75%;
     width: 25%;
+    height: 62.5%;
     z-index: 10;
 }
 #dark-mode-toggle-checkbox #sun{
@@ -64,7 +68,7 @@ body{
     transition: 0.3s;
 }
 #dark-mode-toggle-checkbox #sun path{
-    stroke: #ffc800;
+    stroke: #ffde66;
     transition: 0.3s;
 }
 #dark-mode-toggle-checkbox #moon{
@@ -76,5 +80,5 @@ body{
     stroke: #463700;
 }
 #dark-mode-toggle:checked + #dark-mode-toggle-checkbox #moon{
-    fill: #0e4687;
+    fill: #2270ca;
 }
