@@ -27,10 +27,10 @@ const dropdowns = ref([
   <header> 
     <div class="wrapperDisabled">
       <NavBar
-      :active-page="0"
+      :active-page="activePage"
       :pages="mainTabs"
       :dropdowns="dropdowns"
-      :nav-link-click="(tab) => {activePage = tab;console.log(activePage)}"
+      :nav-link-click="(tab : string) => {activePage = tab;console.log(activePage)}"
       ></NavBar>
       
       <component :is="tabs[activePage]">

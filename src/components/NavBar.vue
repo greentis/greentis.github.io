@@ -1,10 +1,10 @@
 <script setup lang="ts">
     import {ref} from 'vue';
     interface navContent{
-        activePage:number,
+        activePage:string,
         pages:any,
         dropdowns:any,
-        navLinkClick:(x:number)=>void
+        navLinkClick:(x:string)=>void
     }
     defineProps<navContent>()/* 
     defineEmits<{
@@ -57,8 +57,8 @@
                     <li  v-for="(value, key) in pages" class="nav-item">
                         <a href="#"
                         class="nav-link"
-                        :class="{active:key == activePage}"
-                        @click.prevent="navLinkClick(key)">{{key}}</a>
+                        :class="{active:key as unknown as string == activePage}"
+                        @click.prevent="navLinkClick(key as unknown as string)">{{key}}</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav">
