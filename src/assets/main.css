@@ -1,0 +1,87 @@
+
+
+nav, nav * {
+  transition: 0.3s;
+}
+body:has(.navbar-dark){
+  background-color: black;
+  color: white;
+  transition: 0.3s;
+}
+#dark-mode-toggle-checkbox{
+  width:50px;
+  aspect-ratio: 5/2;
+  border-radius: 200px;
+
+  position: relative;
+  display: block;
+  background: wheat;
+  
+  box-shadow: inset 0px 5px 15px rgba(22, 22, 22, 0.4), inset 0px -5px 15px rgba(255,255,255,0.4);
+  cursor: pointer;
+  transition: 0.3s;
+}   
+#dark-mode-toggle-checkbox:after{
+  content: "";
+  width:36%;
+  height:90%;
+  border-radius: 2000px;
+
+  position: absolute;
+  top:2%;
+  left:2%;
+  background: linear-gradient(180deg, #ffcc89, #d8860b);
+  transition: 0.3s;
+  box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+}
+
+#dark-mode-toggle{
+  width:0px;
+  height:0px;
+  position: absolute;
+  align-items: center;
+  visibility: hidden;
+  transition: 0.3s;
+}
+#dark-mode-toggle:checked + #dark-mode-toggle-checkbox{
+  background: #04172d;
+}
+#dark-mode-toggle:checked + #dark-mode-toggle-checkbox:after{
+  left: 98%;
+  transform: translateX(-100%);
+  background: linear-gradient(180deg, #676767, #3a3a3a);
+}
+#dark-mode-toggle-checkbox:active:after{
+  width: 58%;
+  /* background: linear-gradient(180deg, #b29977, #896023); */
+}
+body{
+  background: #fff;
+  transition: 0.3s;
+}
+#dark-mode-toggle-checkbox svg{
+  position: absolute;
+  top:18.75%;
+  width: 25%;
+  height: 62.5%;
+  z-index: 10;
+}
+#dark-mode-toggle-checkbox #sun{
+  left:7%;
+  transition: 0.3s;
+}
+#dark-mode-toggle-checkbox #sun path{
+  stroke: #ffde66;
+  transition: 0.3s;
+}
+#dark-mode-toggle-checkbox #moon{
+  left:67%;
+  fill: #506071;
+  transition: 0.3s;
+}
+#dark-mode-toggle:checked + #dark-mode-toggle-checkbox #sun path{
+  stroke: #463700;
+}
+#dark-mode-toggle:checked + #dark-mode-toggle-checkbox #moon{
+  fill: #2270ca;
+}
