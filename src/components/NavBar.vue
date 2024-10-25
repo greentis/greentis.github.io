@@ -2,20 +2,14 @@
     import {ref} from 'vue';
     interface navContent{
         activePage:number,
-        pages:auto,
-        dropdowns:array,
+        pages:any,
+        dropdowns:any,
         navLinkClick:(x:number)=>void
     }
     defineProps<navContent>()/* 
     defineEmits<{
         navLinkClick: (index:number)=> void
     }> */
-    defineEmits({
-        changeTheme(){
-            console.log(this.theme = (this.theme == "light" ? "dark" : "light"));
-            return this.theme;
-        }
-    })
     function changeTheme(){
         console.log(theme.value = (theme.value == "light" ? "dark" : "light"));
         return theme;

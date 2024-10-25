@@ -3,7 +3,7 @@
 // defineProps
 // withDefaults
 const props = withDefaults(defineProps<{
-  pages?: array
+  pages?: any
 }>(), {pages:[
     {
         tab: {text:"Home", url:"index.html"},
