@@ -1,10 +1,10 @@
 <script setup lang="ts">
     import {ref} from 'vue';
     interface navContent{
-        activePage:string,
+        activePage:any,
         pages:any,
         dropdowns:any,
-        navLinkClick:(x:string)=>void
+        navLinkClick:(x:any)=>void
     }
     defineProps<navContent>()/* 
     defineEmits<{

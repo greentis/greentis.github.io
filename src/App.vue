@@ -11,7 +11,7 @@ import Animation from './notes/Animation.vue'
 import {reactive, ref} from 'vue';
 const tabs = {Home,About,Blog,FlexBox,Animation}
 const mainTabs = {Home,About,Blog}
-let activePage = ref("Home")
+let activePage:string = "Home"
 const dropdowns = ref([
                 {text:"Html exercise", pages:[
                     {text:"Flexbox", tab:"FlexBox"},
@@ -30,10 +30,10 @@ const dropdowns = ref([
       :active-page="activePage"
       :pages="mainTabs"
       :dropdowns="dropdowns"
-      :nav-link-click="(tab : string) => {activePage = tab;console.log(activePage)}"
+      :nav-link-click="(tab: string) => {activePage = tab;console.log(activePage)}"
       ></NavBar>
       
-      <component :is="tabs[activePage]">
+      <component :is="tabs[activePage as keyof typeof mainTabs]">
       </component>
     </div>
     
