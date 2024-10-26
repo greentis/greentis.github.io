@@ -78,8 +78,4 @@
     flex-shrink: 0;
     align-items:baseline;
 }
-
-.details{
-    
-}
 </style>

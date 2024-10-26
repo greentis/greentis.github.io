@@ -25,7 +25,7 @@
 .cards{
     position: absolute;
     width:v-bind('cardSize');
-    top:calc(50% - v-bind('cardSize')/2);
+    top:calc(50vh - v-bind('cardSize')/2);
     left:calc(50% - v-bind('cardSize')/2);
     transform-style: preserve-3d;
     transform: perspective(1000px);
