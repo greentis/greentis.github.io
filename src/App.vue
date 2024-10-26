@@ -11,7 +11,7 @@ import Animation from './notes/Animation.vue'
 import {reactive, ref, type Ref} from 'vue';
 const tabs = {Home,About,Blog,FlexBox,Animation}
 const mainTabs = {Home,About,Blog}
-let activePage:Ref= ref("Home")
+let activePage:Ref= ref("FlexBox")
 const dropdowns = ref([
                 {text:"Html exercise", pages:[
                     {text:"Flexbox", tab:"FlexBox"},
@@ -24,12 +24,11 @@ const dropdowns = ref([
 </script>
 
 <style scoped>
-.wrapper{
+.contentHub{
   position: absolute;
   left:8%;
   width:84%;
   transition: 0.3s;
-  
 }
 </style>
 
@@ -41,7 +40,7 @@ const dropdowns = ref([
       :nav-link-click="(tab: string) => {activePage = tab;console.log(activePage)}"
       ></NavBar>
 
-    <div class="wrapper">
+    <div class="contentHub">
       <component :is="tabs[activePage as keyof typeof mainTabs]">
       </component>
     </div>

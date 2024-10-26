@@ -1,8 +1,8 @@
 <script setup lang="ts">
     let sections = [
-        {title:"Fast",content:"Typescript is fast"},
-        {title:"Slow",content:"Typescript"},
-        {title:"Slow",content:"Typescript"},
+        {title:"Car",content:"Fast, low capacity"},
+        {title:"Train",content:"High capacity, Point to Point"},
+        {title:"Bus",content:"Flexible, slow"},
         ]
 </script>
 <template>
@@ -49,33 +49,32 @@
 
     transition: 0.3s;
     background-image: linear-gradient(to bottom right, #008cff, #e100ff);
-    z-index:-2;
+    z-index: -1;
 }
 
 .box:hover{
     width:120px;
     background: #008cff;
-    box-shadow: 10px -20px 40px #008cff85,10px 20px 40px #e100ffcc;
+    box-shadow: -5px -20px 40px #008cff85,10px 20px 40px #e100ffcc;
 }
 
 .block:has(.box:hover){
     box-shadow: -10px 10px 10px #51504d88;
 }
 
-.row{
-    width:100%;
-    height:100%;
-    display: flex;
-    flex-direction: column;
-    
-}
-
 .block{
-    width: 100%;
+    width: 98%;
     display: flex;
-    position: relative;
+    
     flex-direction:row;
     flex-shrink: 0;
-    align-items:baseline;
+    align-items:center;
+    justify-items: center;
+    position: relative;
+    padding: 0%;
+}
+
+h3{
+    padding: 10px;
 }
 </style>

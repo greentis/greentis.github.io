@@ -14,11 +14,11 @@ body{
 }
 
 
-.wrapper{
+.contentHub{
   background-color: rgb(240, 247, 247);
 }
 
-.navbar-dark + .wrapper{
+.navbar-dark + .contentHub{
   background-color: #222831;
   color: white;
   
