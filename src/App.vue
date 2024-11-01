@@ -11,7 +11,7 @@ import Animation from './notes/Animation.vue'
 import {reactive, ref, type Ref} from 'vue';
 const tabs = {Home,About,Blog,FlexBox,Animation}
 const mainTabs = {Home,About,Blog}
-let activePage:Ref= ref("FlexBox")
+let activePage:Ref= ref("Home")
 const dropdowns = ref([
                 {text:"Html exercise", pages:[
                     {text:"Flexbox", tab:"FlexBox"},

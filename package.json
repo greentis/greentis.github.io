@@ -3,22 +3,28 @@
   "version": "0.0.0",
   "private": true,
   "type": "module",
+  "main": "src/main.ts",
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check \"build-only {@}\" --",
     "preview": "vite preview",
     "build-only": "vite build",
-    "type-check": "vue-tsc --build --force"
+    "type-check": "vue-tsc --build --force",
+    "serve": "node ./src/main.ts"
   },
   "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
     "vue": "^3.5.12"
   },
   "devDependencies": {
     "@tsconfig/node20": "^20.1.4",
-    "@types/node": "^20.16.11",
+    "@types/express": "^5.0.0",
+    "@types/node": "^20.17.5",
     "@vitejs/plugin-vue": "^5.1.4",
     "@vue/tsconfig": "^0.5.1",
     "npm-run-all2": "^6.2.3",
+    "ts-node": "^10.9.2",
     "typescript": "~5.5.4",
     "vite": "^5.4.8",
     "vue-tsc": "^2.1.6"
