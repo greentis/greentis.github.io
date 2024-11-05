@@ -19,6 +19,7 @@ const dropdowns = ref([
                     {text:"Animation", tab:"Animation"}
                 ]},
                 {text:"Study Notes", pages:[
+                    {text:"Excel Clock", url:"https://docs.google.com/spreadsheets/d/1lJ_0JLMESIgia7gz2Dnk26chOPg_oRuHrVBz6jnHQlQ/edit?usp=sharing"},
                     {text:"Biology keyword list", url:"https://hkustconnect-my.sharepoint.com/:w:/g/personal/kllauar_connect_ust_hk/EXlW0R9OOr9Cmt271k78Fa0Bhe4zSPyah7mZi8q2ZCKjUA?e=elZ3C4"}
                 ]}
             ])
