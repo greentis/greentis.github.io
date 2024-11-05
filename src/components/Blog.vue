@@ -2,9 +2,19 @@
 // defineEmits
 // defineProps
 // withDefaults
-const props = withDefaults(defineProps<{
-  pages?: any
-}>(), {pages:[
+type page = {
+  tab: {text:string, url:string},
+  title: string,
+  content: string[]
+}
+type blogProps = {
+  pages: page[]
+}
+const props = withDefaults(defineProps<
+  blogProps
+>(), {pages:()=>
+  {
+    return [
     {
         tab: {text:"Home", url:"index.html"},
         title: "Home Page",
@@ -23,14 +33,15 @@ const props = withDefaults(defineProps<{
         content: ["Nothing Here Yet!"
     ]
     }
-]})
+  ]}
+})
 </script>
 
 <template>
   <div id="content" class="container">
-    <h1>{{pages[2].title}}</h1>
+    <h1>{{props.pages[2].title}}</h1>
             
-    <p v-for="line in pages[2].content">{{line}}</p>
+    <p v-for="line in props.pages[2].content">{{line}}</p>
   </div>
 </template>
 

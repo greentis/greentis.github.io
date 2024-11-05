@@ -1,12 +1,17 @@
 <script setup lang="ts">
-    import {ref} from 'vue';
-    interface navContent{
-        activePage:any,
-        pages:any,
-        dropdowns:any,
+    import {ref, type DefineComponent, type Ref} from 'vue';
+    import type { mainTab } from '@/App.vue';
+    type dropdown = {
+      text:string,
+      pages:{text:string, tab?:string, url?:string}[]
+    }
+    type navProps = {
+        activePage:String,
+        pages:mainTab[],
+        dropdowns:dropdown[],
         navLinkClick:(x:any)=>void
     }
-    defineProps<navContent>()/* 
+    defineProps<navProps>()/* 
     defineEmits<{
         navLinkClick: (index:number)=> void
     }> */
@@ -130,11 +135,11 @@ nav, nav * {
             <div class="collapse navbar-collapse" id="navbarNav">
                 <!-- Make the alignment from left to right -->
                 <ul  class="navbar-nav">
-                    <li  v-for="(value, key) in pages" class="nav-item">
+                    <li  v-for="key in pages" class="nav-item">
                         <a href="#"
                         class="nav-link"
-                        :class="{active:key as unknown as string == activePage}"
-                        @click.prevent="navLinkClick(key as unknown as string)">{{key}}</a>
+                        :class="{active:key == activePage}"
+                        @click.prevent="navLinkClick(key)">{{key}}</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav">

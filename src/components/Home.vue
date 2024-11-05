@@ -2,9 +2,19 @@
 // defineEmits
 // defineProps
 // withDefaults
-const props = withDefaults(defineProps<{
-  pages?: any
-}>(), {pages:[
+type page = {
+  tab: {text:string, url:string},
+  title: string,
+  content: string[]
+}
+type homeProps = {
+  pages: page[]
+}
+const props = withDefaults(defineProps<
+  homeProps
+>(), {pages:()=>
+  {
+    return [
     {
         tab: {text:"Home", url:"index.html"},
         title: "Home Page",
@@ -23,7 +33,8 @@ const props = withDefaults(defineProps<{
         content: ["Nothing Here Yet!"
     ]
     }
-]})
+  ]}
+})
 </script>
 
 <template>

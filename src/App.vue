@@ -8,10 +8,11 @@ import Blog from './components/Blog.vue'
 import FlexBox from './notes/FlexBox.vue'
 import Animation from './notes/Animation.vue'
 
-import {reactive, ref, type Ref} from 'vue';
+import {ref, type Ref} from 'vue';
 const tabs = {Home,About,Blog,FlexBox,Animation}
 const mainTabs = {Home,About,Blog}
-let activePage:Ref= ref("Home")
+export type mainTab = keyof typeof mainTabs; 
+let activePage= ref("Home")
 const dropdowns = ref([
                 {text:"Html exercise", pages:[
                     {text:"Flexbox", tab:"FlexBox"},
@@ -35,7 +36,7 @@ const dropdowns = ref([
 <template>
     <NavBar
       :active-page="activePage"
-      :pages="mainTabs"
+      :pages="Object.keys(mainTabs) as unknown as mainTab[]"
       :dropdowns="dropdowns"
       :nav-link-click="(tab: string) => {activePage = tab;console.log(activePage)}"
       ></NavBar>
