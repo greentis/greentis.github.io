@@ -20,6 +20,7 @@ const dropdowns = ref([
                 ]},
                 {text:"Study Notes", pages:[
                     {text:"Excel Clock", url:"https://docs.google.com/spreadsheets/d/1lJ_0JLMESIgia7gz2Dnk26chOPg_oRuHrVBz6jnHQlQ/edit?usp=sharing"},
+                    {text:"HCI project", url:"https://hkustconnect-my.sharepoint.com/:p:/g/personal/kllauar_connect_ust_hk/EfiqgDOZCI1PomgdO6IU_xcB5tHjywW4jrp075YCK7VPSg?e=2wcnqT"},
                     {text:"Biology keyword list", url:"https://hkustconnect-my.sharepoint.com/:w:/g/personal/kllauar_connect_ust_hk/EXlW0R9OOr9Cmt271k78Fa0Bhe4zSPyah7mZi8q2ZCKjUA?e=elZ3C4"}
                 ]}
             ])
