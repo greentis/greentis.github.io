@@ -40,7 +40,7 @@ const dropdowns = ref([
       :active-page="activePage"
       :pages="Object.keys(mainTabs) as unknown as mainTab[]"
       :dropdowns="dropdowns"
-      :nav-link-click="(tab: string) => {activePage = tab;console.log(activePage)}"
+      @nav-link-click="(tab: string) => {activePage = tab;console.log(activePage)}"
       ></NavBar>
 
     <div class="contentHub">

@@ -8,13 +8,10 @@
     type navProps = {
         activePage:String,
         pages:mainTab[],
-        dropdowns:dropdown[],
-        navLinkClick:(x:any)=>void
+        dropdowns:dropdown[]
     }
-    defineProps<navProps>()/* 
-    defineEmits<{
-        navLinkClick: (index:number)=> void
-    }> */
+    defineProps<navProps>()
+    const emit = defineEmits(['navLinkClick'])
     function changeTheme(){
         console.log(theme.value = (theme.value == "light" ? "dark" : "light"));
         return theme;
@@ -139,7 +136,7 @@ nav, nav * {
                         <a href="#"
                         class="nav-link"
                         :class="{active:key == activePage}"
-                        @click.prevent="navLinkClick(key)">{{key}}</a>
+                        @click.prevent="emit('navLinkClick',key)">{{key}}</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav">
@@ -149,7 +146,7 @@ nav, nav * {
                             {{dropdown.text}}</a>
                         <ul class="dropdown-menu" aria-labelledby="#navbarDropDown">
                             <li v-for="page in dropdown.pages">
-                                <a v-if="page.tab" @click.prevent="navLinkClick(page.tab)" a href="#" class="dropdown-item">{{page.text}}</a>
+                                <a v-if="page.tab" @click.prevent="emit('navLinkClick',page.tab)" a href="#" class="dropdown-item">{{page.text}}</a>
                                 <a v-else a :href="page.url" class="dropdown-item">{{page.text}}</a>
                             
                             </li>
