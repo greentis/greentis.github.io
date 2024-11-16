@@ -8,13 +8,25 @@ const props = defineProps<{
 
 <template>
   <div id="content" class="container">
-    <h1>About this page</h1>
-    <img alt="Vue logo" class="logo" src="../assets/logo.svg" width="125" height="125" />
+    <h1>About me</h1>
+    <ul>
+      <li>Interest: Sport (Swimming, cycling, running, gym), Photography, Piano</li>
+      <li>Programming (C++, Python, Java, Javascript, Typescript, Kotlin, VBA)</li>
+      <li>Web/software development appertise</li>
+    </ul>
 
+    <h1>About this page</h1>
     <p>
-        <strong>This page is made with Vue Create and Typescript</strong>
+        <strong>This page is made with Vue and Typescript</strong>
     </p>
-    <h3>Try me with different aspect Ratio!</h3>
+    <ul>
+      <li>The <strong><i>Blog</i></strong> tag contains some description to my personal projects</li>
+      <li>The <strong><i>Html exercise</i></strong> tag contains some html+css exercise</li>
+      <li>The <strong><i>Study notes</i></strong> tag contains some microsoft office skill application</li>
+
+    </ul>
+    <p>Try me with different aspect Ratio!</p>
+
   </div>
 </template>
 

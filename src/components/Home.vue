@@ -19,7 +19,9 @@ const props = withDefaults(defineProps<
         tab: {text:"Home", url:"index.html"},
         title: "Home Page",
         content: ["Name: Lau Kin Lun",
-        "Degree: Computer Science"]
+        "Degree: Computer Science",
+        "Organization: Hong Kong University of Science and Technology",
+        "Graduation Year: 2026"]
     },
     {
         tab: {text:"About", url:"index.html"},
@@ -42,6 +44,9 @@ const props = withDefaults(defineProps<
     <h1>{{pages[0].title}}</h1>
             
     <p v-for="line in pages[0].content">{{line}}</p>
+    <p>Email: <a href="kllauar@connect.ust.hk">kllauar@connect.ust.hk</a></p>
+
+
   </div>
 </template>
 
