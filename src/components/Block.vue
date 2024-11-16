@@ -49,7 +49,6 @@
 <style scoped>
 div.container {
     position: relative;
-    background-color: #f0f0f0;
     width: calc(100% - 20px);
     padding: 0px 0px;
     margin: 30px 10px;
@@ -66,7 +65,7 @@ div.container::before{
     width: 100%;
     height: 100%;
     border-radius: 0px 20px 0px 20px;
-    background: linear-gradient(to bottom, rgba(32,32,32,0), #f0f0f0ff);
+    background: linear-gradient(to bottom, #ffffff00, #f0f0f0ff);
     transition: 0.4s;
 }
 
