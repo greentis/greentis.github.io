@@ -53,9 +53,11 @@ div.container {
     padding: 0px 0px;
     margin: 30px 10px;
     border-radius: 0px 20px 0px 20px;
-    height: 120px;
+    max-height: 120px;
     overflow-y: hidden;
-    transition: 0.2s;
+    transition: 0.5s;
+    
+    transition-timing-function: ease-out;
 }
 
 div.container::before{
@@ -66,11 +68,13 @@ div.container::before{
     height: 100%;
     border-radius: 0px 20px 0px 20px;
     background: linear-gradient(to bottom, #ffffff00, #f0f0f0ff);
-    transition: 0.4s;
+    transition: 0.5s;
 }
 
 div.container:hover{
-    height: 300px;
+    
+    transition-timing-function: ease-in;
+    max-height: 100%;
 }
 
 div.container:hover::before{
